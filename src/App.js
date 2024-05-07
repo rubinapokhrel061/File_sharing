@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { UploadFile } from "./Api";
 import "./index.css";
 import { useEffect, useRef, useState } from "react";
@@ -54,9 +55,9 @@ function App() {
         {/* <input value={copyText} onChange={(e)=>setCopyText(e.target.value)} /> */}
 
         <div className="pt-3  break-words after:duration-100 after:invisible ">
-          <a href={result} target="_blank">
+          <Link to={result} target="_blank">
             {result}
-          </a>
+          </Link>
           <button onClick={handleCopy}>Copy</button>
         </div>
       </div>
