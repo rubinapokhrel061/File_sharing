@@ -8,6 +8,11 @@ function App() {
 
   const fileInput = useRef();
 
+  const handleCopy = () => {
+    navigator.clipboard.writeText(result);
+    alert("Copied");
+  };
+
   useEffect(() => {
     const getImage = async () => {
       if (file) {
@@ -46,10 +51,13 @@ function App() {
           style={{ display: "none" }}
           onChange={(e) => setFile(e.target.files[0])}
         />
+        {/* <input value={copyText} onChange={(e)=>setCopyText(e.target.value)} /> */}
+
         <div className="pt-3  break-words after:duration-100 after:invisible ">
           <a href={result} target="_blank">
             {result}
           </a>
+          <button onClick={handleCopy}>Copy</button>
         </div>
       </div>
     </div>
