@@ -8,11 +8,6 @@ function App() {
 
   const fileInput = useRef();
 
-  const handleCopy = () => {
-    navigator.clipboard.writeText(result);
-    alert("Copied");
-  };
-
   useEffect(() => {
     const getImage = async () => {
       if (file) {
@@ -57,7 +52,6 @@ function App() {
           <a href={result} target="_blank">
             {result}
           </a>
-          <button onClick={handleCopy}>Copy</button>
         </div>
       </div>
     </div>
