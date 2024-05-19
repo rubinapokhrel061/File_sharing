@@ -27,10 +27,11 @@ const Upload = () => {
   const onUploadFileClick = () => {
     fileInput.current.click();
     setUploadClicked(true);
+    setErr("");
   };
 
   const getLink = (e) => {
-    if (uploadClicked) {
+    if (result) {
       navigate("/filelink", {
         replace: true,
         state: {
