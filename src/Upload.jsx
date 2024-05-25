@@ -77,10 +77,12 @@ const Upload = () => {
           <br />
           <div className="flex flex-col">
             <button
-              className="w-[7rem] md:w-[10rem] h-10  bg-transparent hover:bg-[#231b74] text-sm md:text-xl font-semibold  py-1 px-3 border  border-blue-500  rounded-lg"
+              className={`bg-blue-500 text-white w-[7rem] md:w-[10rem] text-sm md:text-xl font-medium h-10 px-4 py-2 rounded-lg  ${
+                result ? "bg-green-500" : "hover:bg-blue-600"
+              }`}
               onClick={onUploadFileClick}
             >
-              {result ? "Uploded" : "Upload"}
+              {result ? "Uploded!" : "Upload"}
             </button>
             <input
               type="file"
@@ -99,7 +101,8 @@ const Upload = () => {
 
           <button
             onClick={getLink}
-            className="w-[7rem] md:w-[10rem] h-10 mt-2 bg-transparent hover:bg-[#231b74] text-sm md:text-xl font-semibold  py-1 px-3 border  border-blue-500  rounded-lg"
+            className="w-[7rem] md:w-[10rem] 
+             h-10 mt-2 bg-transparent  text-sm md:text-xl font-medium  py-1 px-3 border  border-blue-500 hover:border-blue-600  rounded-lg"
           >
             Get Link
           </button>
